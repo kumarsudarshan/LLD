@@ -1,4 +1,4 @@
-package com.splitwise.models;
+package splitwise.splitwise.models;
 
 public class ExpenseMetadata {
     private String name;

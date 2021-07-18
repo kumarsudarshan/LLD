@@ -1,6 +1,6 @@
-package com.splitwise;
+package splitwise.splitwise;
 
-import com.splitwise.models.*;
+import splitwise.splitwise.models.*;
 
 import java.util.ArrayList;
 import java.util.List;
