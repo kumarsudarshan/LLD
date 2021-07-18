@@ -1,6 +1,6 @@
-package splitwise.splitwise;
+package splitwise;
 
-import splitwise.splitwise.models.*;
+import splitwise.models.*;
 import java.util.List;
 
 public class ProcessExpense {

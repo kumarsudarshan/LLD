@@ -1,25 +1,10 @@
-package splitwise.models;
+package library.models;
 
-public class User {
-    private int id;
+public class Person {
     private String name;
+    private Address address;
     private String email;
     private String phone;
-
-    public User(int id, String name, String email, String phone) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -27,6 +12,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getEmail() {

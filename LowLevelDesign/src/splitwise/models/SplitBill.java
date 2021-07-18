@@ -1,4 +1,4 @@
-package splitwise.splitwise.models;
+package splitwise.models;
 
 public abstract class SplitBill {
     private User user;

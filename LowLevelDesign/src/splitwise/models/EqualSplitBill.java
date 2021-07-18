@@ -1,4 +1,4 @@
-package splitwise.splitwise.models;
+package splitwise.models;
 
 public class EqualSplitBill extends SplitBill {
 
