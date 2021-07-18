@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExpenseManager {
+public class ExpenseProcessor {
     List<Expense> expenses;
     Map<Integer, User> userMap;
     Map<Integer, Map<Integer, Double> > balanceSheet;
 
-    public ExpenseManager() {
+    public ExpenseProcessor() {
         expenses = new ArrayList<Expense>();
         userMap = new HashMap<Integer, User>();
         balanceSheet = new HashMap<Integer, Map<Integer, Double>>();
@@ -22,10 +22,10 @@ public class ExpenseManager {
         balanceSheet.put(user.getId(), new HashMap<Integer, Double>());
     }
 
-    public void addExpense(ExpenseType expenseType, double amount, Integer paidBy, List<Split> splits, ExpenseMetadata expenseMetadata) {
-        Expense expense = ExpenseService.createExpense(expenseType, amount, userMap.get(paidBy), splits, expenseMetadata);
+    public void addExpense(ExpenseType expenseType, double amount, Integer paidBy, List<SplitBill> splits, ExpenseMetadata expenseMetadata) {
+        Expense expense = ProcessExpense.createExpense(expenseType, amount, userMap.get(paidBy), splits, expenseMetadata);
         expenses.add(expense);
-        for (Split split : expense.getSplits()) {
+        for (SplitBill split : expense.getSplits()) {
             Integer paidTo = split.getUser().getId();
             Map<Integer, Double> balances = balanceSheet.get(paidBy);
             if (!balances.containsKey(paidTo)) {

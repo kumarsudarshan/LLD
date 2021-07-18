@@ -3,23 +3,23 @@ package com.splitwise.models;
 import java.util.List;
 
 public class ExactExpense extends Expense {
-    public ExactExpense(double amount, User paidBy, List<Split> splits, ExpenseMetadata expenseMetadata) {
+    public ExactExpense(double amount, User paidBy, List<SplitBill> splits, ExpenseMetadata expenseMetadata) {
         super(amount, paidBy, splits, expenseMetadata);
     }
 
     @Override
     public boolean validate() {
-        for (Split split : getSplits()) {
-            if (!(split instanceof ExactSplit)) {
+        for (SplitBill split : getSplits()) {
+            if (!(split instanceof ExactSplitBill)) {
                 return false;
             }
         }
 
         double totalAmount = getAmount();
         double sumSplitAmount = 0;
-        for (Split split : getSplits()) {
-            ExactSplit exactSplit = (ExactSplit) split;
-            sumSplitAmount += exactSplit.getAmount();
+        for (SplitBill split : getSplits()) {
+            ExactSplitBill exactSplitBill = (ExactSplitBill) split;
+            sumSplitAmount += exactSplitBill.getAmount();
         }
 
         if (totalAmount != sumSplitAmount) {

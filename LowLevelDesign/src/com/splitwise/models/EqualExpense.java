@@ -3,14 +3,14 @@ package com.splitwise.models;
 import java.util.List;
 
 public class EqualExpense extends Expense {
-    public EqualExpense(double amount, User paidBy, List<Split> splits, ExpenseMetadata expenseMetadata) {
+    public EqualExpense(double amount, User paidBy, List<SplitBill> splits, ExpenseMetadata expenseMetadata) {
         super(amount, paidBy, splits, expenseMetadata);
     }
 
     @Override
     public boolean validate() {
-        for (Split split : getSplits()) {
-            if (!(split instanceof EqualSplit)) {
+        for (SplitBill split : getSplits()) {
+            if (!(split instanceof EqualSplitBill)) {
                 return false;
             }
         }

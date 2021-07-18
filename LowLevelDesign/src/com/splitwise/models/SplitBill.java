@@ -1,10 +1,10 @@
 package com.splitwise.models;
 
-public abstract class Split {
+public abstract class SplitBill {
     private User user;
     double amount;
 
-    public Split(User user) {
+    public SplitBill(User user) {
         this.user = user;
     }
 

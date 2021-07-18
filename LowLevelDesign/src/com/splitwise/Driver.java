@@ -5,7 +5,6 @@ import com.splitwise.models.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Driver {
 
@@ -26,62 +25,62 @@ public class Driver {
 
 
     public static void calculateSplitEqually(List<User> users, Double totalAmount, Integer paidBy){
-        ExpenseManager expenseManager = new ExpenseManager();
+        ExpenseProcessor expenseProcessor = new ExpenseProcessor();
         for(User user : users){
-            expenseManager.addUser(user);
+            expenseProcessor.addUser(user);
         }
 
         // split equally
         System.out.println("--------------- SPLIT EQUALLY ----------------");
-        List<Split> splits = new ArrayList<>();
-        for (Map.Entry<Integer, User> user : expenseManager.userMap.entrySet()) {
-            splits.add(new EqualSplit(user.getValue()));
+        List<SplitBill> splits = new ArrayList<>();
+        for (Map.Entry<Integer, User> user : expenseProcessor.userMap.entrySet()) {
+            splits.add(new EqualSplitBill(user.getValue()));
         }
-        expenseManager.addExpense(ExpenseType.EQUAL, totalAmount, paidBy, splits, null);
-        expenseManager.showBalances();
-//        expenseManager.showBalance(101);
-//        expenseManager.showBalance(102);
-//        expenseManager.showBalance(103);
-//        expenseManager.showBalance(104);
+        expenseProcessor.addExpense(ExpenseType.EQUAL, totalAmount, paidBy, splits, null);
+        expenseProcessor.showBalances();
+//        expenseProcessor.showBalance(101);
+//        expenseProcessor.showBalance(102);
+//        expenseProcessor.showBalance(103);
+//        expenseProcessor.showBalance(104);
     }
 
     public static void calculateSplitPercent(List<User> users, Double totalAmount, Integer paidBy){
-        ExpenseManager expenseManager = new ExpenseManager();
+        ExpenseProcessor expenseProcessor = new ExpenseProcessor();
         for(User user : users){
-            expenseManager.addUser(user);
+            expenseProcessor.addUser(user);
         }
 
         System.out.println();
         System.out.println("--------------- SPLIT PERCENT ----------------");
         // percent split
-        List<Split> splits = new ArrayList<>();
-        splits.add(new PercentSplit(expenseManager.userMap.get(101), 40));
-        splits.add(new PercentSplit(expenseManager.userMap.get(102), 40));
-        splits.add(new PercentSplit(expenseManager.userMap.get(103), 10));
-        splits.add(new PercentSplit(expenseManager.userMap.get(104), 10));
+        List<SplitBill> splits = new ArrayList<>();
+        splits.add(new PercentSplitBill(expenseProcessor.userMap.get(101), 40));
+        splits.add(new PercentSplitBill(expenseProcessor.userMap.get(102), 40));
+        splits.add(new PercentSplitBill(expenseProcessor.userMap.get(103), 10));
+        splits.add(new PercentSplitBill(expenseProcessor.userMap.get(104), 10));
 
-        expenseManager.addExpense(ExpenseType.PERCENT, totalAmount, paidBy, splits, null);
-        expenseManager.showBalances();
-//        expenseManager.showBalance(101);
+        expenseProcessor.addExpense(ExpenseType.PERCENT, totalAmount, paidBy, splits, null);
+        expenseProcessor.showBalances();
+//        expenseProcessor.showBalance(101);
     }
 
     public static void calculateSplitExact(List<User> users, Double totalAmount, Integer paidBy){
-        ExpenseManager expenseManager = new ExpenseManager();
+        ExpenseProcessor expenseProcessor = new ExpenseProcessor();
         for(User user : users){
-            expenseManager.addUser(user);
+            expenseProcessor.addUser(user);
         }
 
         System.out.println();
         System.out.println("--------------- SPLIT EXACT ----------------");
         // split exact
-        List<Split> splits = new ArrayList<>();
-        splits.add(new ExactSplit(expenseManager.userMap.get(101), 100));
-        splits.add(new ExactSplit(expenseManager.userMap.get(102), 150));
-        splits.add(new ExactSplit(expenseManager.userMap.get(103), 80));
-        splits.add(new ExactSplit(expenseManager.userMap.get(104), 70));
+        List<SplitBill> splits = new ArrayList<>();
+        splits.add(new ExactSplitBill(expenseProcessor.userMap.get(101), 100));
+        splits.add(new ExactSplitBill(expenseProcessor.userMap.get(102), 150));
+        splits.add(new ExactSplitBill(expenseProcessor.userMap.get(103), 80));
+        splits.add(new ExactSplitBill(expenseProcessor.userMap.get(104), 70));
 
-        expenseManager.addExpense(ExpenseType.EXACT, totalAmount, paidBy, splits, null);
-        expenseManager.showBalances();
-//        expenseManager.showBalance(101);
+        expenseProcessor.addExpense(ExpenseType.EXACT, totalAmount, paidBy, splits, null);
+        expenseProcessor.showBalances();
+//        expenseProcessor.showBalance(101);
     }
 }

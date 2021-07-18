@@ -1,9 +1,9 @@
 package com.splitwise.models;
 
-public class PercentSplit extends Split {
+public class PercentSplitBill extends SplitBill {
     double percent;
 
-    public PercentSplit(User user, double percent) {
+    public PercentSplitBill(User user, double percent) {
         super(user);
         this.percent = percent;
     }

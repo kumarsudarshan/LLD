@@ -6,10 +6,10 @@ public abstract class Expense {
     private String id;
     private double amount;
     private User paidBy;
-    private List<Split> splits;
+    private List<SplitBill> splits;
     private ExpenseMetadata metadata;
 
-    public Expense(double amount, User paidBy, List<Split> splits, ExpenseMetadata metadata) {
+    public Expense(double amount, User paidBy, List<SplitBill> splits, ExpenseMetadata metadata) {
         this.amount = amount;
         this.paidBy = paidBy;
         this.splits = splits;
@@ -40,11 +40,11 @@ public abstract class Expense {
         this.paidBy = paidBy;
     }
 
-    public List<Split> getSplits() {
+    public List<SplitBill> getSplits() {
         return splits;
     }
 
-    public void setSplits(List<Split> splits) {
+    public void setSplits(List<SplitBill> splits) {
         this.splits = splits;
     }
 
