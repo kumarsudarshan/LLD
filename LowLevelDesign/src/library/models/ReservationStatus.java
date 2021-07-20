@@ -1,6 +1,7 @@
 package library.models;
 
-public enum ReservationStatus{
+public enum ReservationStatus {
+    COMPLETED,
     WAITING,
     PENDING,
     CANCELED,

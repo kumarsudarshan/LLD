@@ -3,7 +3,7 @@ package library.models;
 public enum AccountStatus{
     ACTIVE,
     CLOSED,
-    CANCELED,
+    CANCELLED,
     BLACKLISTED,
     NONE
 }

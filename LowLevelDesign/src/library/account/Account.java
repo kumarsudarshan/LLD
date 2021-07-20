@@ -40,6 +40,4 @@ public abstract class Account {
     public void setPerson(Person person) {
         this.person = person;
     }
-
-    public abstract boolean resetPassword();
 }
