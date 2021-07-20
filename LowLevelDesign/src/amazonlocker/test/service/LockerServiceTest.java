@@ -19,16 +19,11 @@ public class LockerServiceTest {
 
     @Before
     public void setup() {
-        LockerLocationRepository.lockerLocations.add(
-                TestData.setupLockerLocation("RMBGBGKAIN",
-                        12.876416, 77.595466));
-        LockerLocationRepository.lockerLocations.add(
-                TestData.setupLockerLocation("VMBGBGKAIN",
-                        12.909953, 77.601866));
+        LockerLocationRepository.lockerLocations.add(TestData.setupLockerLocation("RMBGBGKAIN",12.876416, 77.595466));
+        LockerLocationRepository.lockerLocations.add(TestData.setupLockerLocation("VMBGBGKAIN",12.909953, 77.601866));
         LockerPackageRepository.lockerPackages.add(TestData.getLockerPackage());
 
-        LockerRepository.lockers.addAll(LockerLocationRepository
-                .getLockerLocation("RMBGBGKAIN").getLockers());
+        LockerRepository.lockers.addAll(LockerLocationRepository.getLockerLocation("RMBGBGKAIN").getLockers());
         for (Locker locker : LockerRepository.lockers) {
             LockerRepository.lockerMap.put(locker.getId(), locker);
         }
@@ -47,9 +42,7 @@ public class LockerServiceTest {
 
     @Test
     public void shouldGetLocker() {
-        Locker locker =
-                lockerService.getLocker(LockerSize.XS,
-                        new GeoLocation(12.909953, 77.601866));
+        Locker locker = lockerService.getLocker(LockerSize.XS, new GeoLocation(12.909953, 77.601866));
         Assert.assertNotNull(locker);
     }
 
@@ -62,19 +55,12 @@ public class LockerServiceTest {
     }
 
     @Test
-    public void emulatePickFromLocker() throws
-            PackageSizeMappingException, LockeCodeMisMatchException,
-            LockerNotFoundException, PackPickTimeExceededException, PickupCodeExpiredException {
+    public void emulatePickFromLocker() throws PackageSizeMappingException, LockeCodeMisMatchException, LockerNotFoundException, PackPickTimeExceededException, PickupCodeExpiredException {
         deliveryService.deliver("o1");
         Notification notification = NotificationRepository.notificationMap.get("o1");
-        LockerPackage lockerPackage =
-                LockerPackageRepository.lockerPackages.stream()
-                        .filter(lockerPackage1 -> lockerPackage1.getOrderId().equals("o1"))
-                        .findFirst().get();
-        lockerService.pickFromLocker(lockerPackage.getLockerId(), lockerPackage.getCode(),
-                LocalDateTime.now());
+        LockerPackage lockerPackage = LockerPackageRepository.lockerPackages.stream().filter(lockerPackage1 -> lockerPackage1.getOrderId().equals("o1")).findFirst().get();
+        lockerService.pickFromLocker(lockerPackage.getLockerId(), lockerPackage.getCode(), LocalDateTime.now());
 
-        Assert.assertEquals(LockerStatus.AVAILALBE,
-                LockerRepository.lockerMap.get(notification.getLockerId()).getLockerStatus());
+        Assert.assertEquals(LockerStatus.AVAILALBE, LockerRepository.lockerMap.get(notification.getLockerId()).getLockerStatus());
     }
 }

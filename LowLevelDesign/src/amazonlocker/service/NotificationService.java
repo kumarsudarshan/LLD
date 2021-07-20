@@ -12,12 +12,6 @@ public class NotificationService {
         Notification notification = new Notification(customerId, lockerPackage.getOrderId(),
                 lockerPackage.getLockerId(), lockerPackage.getCode());
         NotificationRepository.notificationMap.put(lockerPackage.getOrderId(), notification);
-        System.out.printf("Customer %s notified for order %s " +
-                        " in locker %s with pin %s", customerId,
-                lockerPackage.getOrderId(),
-                lockerPackage.getLockerId(),
-                lockerPackage.getCode()
-        );
-
+        System.out.printf("Customer %s notified for order %s in locker %s with pin %s", customerId, lockerPackage.getOrderId(), lockerPackage.getLockerId(), lockerPackage.getCode());
     }
 }

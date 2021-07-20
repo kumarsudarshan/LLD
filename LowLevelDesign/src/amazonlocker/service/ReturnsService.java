@@ -9,5 +9,4 @@ public class ReturnsService {
     public void returnItemsToLocker(Item item, Locker locker) {
         locker.setLockerStatus(LockerStatus.CLOSED);
     }
-
 }

@@ -25,10 +25,7 @@ public class LockerService {
         return getAvailableLocker(lockerSize, geoLocation);
     }
 
-    public void pickFromLocker(String lockerId,
-                               String code, LocalDateTime localDateTime) throws
-            LockerNotFoundException, LockeCodeMisMatchException, PackPickTimeExceededException,
-            PickupCodeExpiredException {
+    public void pickFromLocker(String lockerId, String code, LocalDateTime localDateTime) throws LockerNotFoundException, LockeCodeMisMatchException, PackPickTimeExceededException, PickupCodeExpiredException {
         Optional<LockerPackage> lockerPackage =
                 LockerPackageRepository.getLockerByLockerId(lockerId);
         if (!lockerPackage.isPresent())
@@ -48,13 +45,11 @@ public class LockerService {
         }
     }
 
-    private Locker getAvailableLocker(LockerSize lockerSize,
-                                      GeoLocation geoLocation) {
+    private Locker getAvailableLocker(LockerSize lockerSize, GeoLocation geoLocation) {
         return checkAndGetAvailableLockers(lockerSize, geoLocation);
     }
 
-    private Locker checkAndGetAvailableLockers(LockerSize lockerSize,
-                                               GeoLocation geoLocation) {
+    private Locker checkAndGetAvailableLockers(LockerSize lockerSize, GeoLocation geoLocation) {
         Locker locker = LockerRepository.getLocker(lockerSize, geoLocation);
         locker.setLockerStatus(LockerStatus.BOOKED);
         return locker;

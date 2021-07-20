@@ -11,8 +11,7 @@ import org.junit.Test;
 public class LockerRepositoryTest {
     @Before
     public void setup() {
-        LockerLocation lockerLocation = TestData.setupLockerLocation("RMBGBGKAIN",
-                12.876416, 77.595466);
+        LockerLocation lockerLocation = TestData.setupLockerLocation("RMBGBGKAIN",12.876416, 77.595466);
         LockerRepository.lockers.addAll(lockerLocation.getLockers());
         for (Locker locker : LockerRepository.lockers) {
             LockerRepository.lockerMap.put(locker.getId(), locker);

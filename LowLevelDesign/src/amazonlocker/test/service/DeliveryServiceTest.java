@@ -15,16 +15,11 @@ public class DeliveryServiceTest {
 
     @Before
     public void setup() {
-        LockerLocationRepository.lockerLocations.add(
-                TestData.setupLockerLocation("RMBGBGKAIN",
-                        12.876416, 77.595466));
-        LockerLocationRepository.lockerLocations.add(
-                TestData.setupLockerLocation("VMBGBGKAIN",
-                        12.909953, 77.601866));
+        LockerLocationRepository.lockerLocations.add(TestData.setupLockerLocation("RMBGBGKAIN",12.876416, 77.595466));
+        LockerLocationRepository.lockerLocations.add(TestData.setupLockerLocation("VMBGBGKAIN", 12.909953, 77.601866));
         LockerPackageRepository.lockerPackages.add(TestData.getLockerPackage());
 
-        LockerRepository.lockers.addAll(LockerLocationRepository
-                .getLockerLocation("RMBGBGKAIN").getLockers());
+        LockerRepository.lockers.addAll(LockerLocationRepository.getLockerLocation("RMBGBGKAIN").getLockers());
         for (Locker locker : LockerRepository.lockers) {
             LockerRepository.lockerMap.put(locker.getId(), locker);
         }

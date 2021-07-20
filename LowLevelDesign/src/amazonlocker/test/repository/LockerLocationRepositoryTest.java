@@ -11,12 +11,8 @@ import org.junit.jupiter.api.Assertions;
 public class LockerLocationRepositoryTest {
     @Before
     public void setup() {
-        LockerLocationRepository.lockerLocations.add(
-                TestData.setupLockerLocation("RMBGBGKAIN",
-                        12.876416, 77.595466));
-        LockerLocationRepository.lockerLocations.add(
-                TestData.setupLockerLocation("VMBGBGKAIN",
-                        12.909953, 77.601866));
+        LockerLocationRepository.lockerLocations.add(TestData.setupLockerLocation("RMBGBGKAIN",12.876416, 77.595466));
+        LockerLocationRepository.lockerLocations.add(TestData.setupLockerLocation("VMBGBGKAIN",12.909953, 77.601866));
     }
 
     @Test
