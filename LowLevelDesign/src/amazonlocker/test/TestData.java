@@ -2,6 +2,7 @@ package amazonlocker.test;
 
 import amazonlocker.model.LockerLocation;
 import amazonlocker.model.*;
+import amazonlocker.model.Package;
 import amazonlocker.utils.IdGenerator;
 
 import java.time.DayOfWeek;
@@ -108,9 +109,9 @@ public class TestData {
         return order;
     }
 
-    public static Pack getPackage() {
+    public static Package getPackage() {
         Order order = getPhoneOrder();
-        Pack pack = new Pack(order.getOrderId(), order.getItems());
-        return pack;
+        Package aPackage = new Package(order.getOrderId(), order.getItems());
+        return aPackage;
     }
 }

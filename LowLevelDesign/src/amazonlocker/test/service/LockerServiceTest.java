@@ -1,6 +1,7 @@
 package amazonlocker.test.service;
 
 import amazonlocker.exception.*;
+import amazonlocker.model.Package;
 import amazonlocker.service.DeliveryService;
 import amazonlocker.service.LockerService;
 import amazonlocker.test.TestData;
@@ -48,8 +49,8 @@ public class LockerServiceTest {
 
     @Test
     public void shouldGetLockerSizeForPack() throws PackageSizeMappingException {
-        Pack pack = TestData.getPackage();
-        LockerSize lockerSize = SizeUtil.getLockerSizeForPack(pack.getPackageSize());
+        Package aPackage = TestData.getPackage();
+        LockerSize lockerSize = SizeUtil.getLockerSizeForPack(aPackage.getPackageSize());
         System.out.println(lockerSize);
         Assert.assertNotNull(lockerSize);
     }

@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.UUID;
 
 @Getter
-public class Pack {
+public class Package {
     private String id;
     private double packageSize;
     private String orderId;
     private List<Item> items;
 
-    public Pack(String orderId, List<Item> items) {
+    public Package(String orderId, List<Item> items) {
         this.id = UUID.randomUUID().toString();
         this.orderId = orderId;
         this.items = items;

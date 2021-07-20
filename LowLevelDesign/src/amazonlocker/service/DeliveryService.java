@@ -2,6 +2,7 @@ package amazonlocker.service;
 
 import amazonlocker.exception.PackageSizeMappingException;
 import amazonlocker.model.*;
+import amazonlocker.model.Package;
 import amazonlocker.repository.LockerPackageRepository;
 import amazonlocker.utils.IdGenerator;
 import amazonlocker.utils.SizeUtil;
@@ -16,8 +17,8 @@ public class DeliveryService {
     public void deliver(String orderId) throws PackageSizeMappingException {
         Order order = orderService.getOrder(orderId);
         List<Item> items = orderService.getItemsForOrder(orderId);
-        Pack pack = new Pack(orderId, items);
-        LockerSize lockerSize = SizeUtil.getLockerSizeForPack(pack.getPackageSize());
+        Package aPackage = new Package(orderId, items);
+        LockerSize lockerSize = SizeUtil.getLockerSizeForPack(aPackage.getPackageSize());
         Locker locker = lockerService.getLocker(lockerSize, order.getDeliveryGeoLocation());
         LockerPackage lockerPackage = new LockerPackage();
         lockerPackage.setOrderId(orderId);
