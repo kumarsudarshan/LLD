@@ -22,8 +22,7 @@ public class TestData {
                 12.909953, 77.601866);
     }
 
-    public static LockerLocation setupLockerLocation(String locationId,
-                                                     double latitude, double longitude) {
+    public static LockerLocation setupLockerLocation(String locationId, double latitude, double longitude) {
         LockerLocation lockerLocation = getLockerLocation(locationId, latitude, longitude);
         for (int i = 0; i < 50; i++) {
             lockerLocation.getLockers().add(createLocker(LockerSize.XS, locationId));
@@ -50,9 +49,7 @@ public class TestData {
         return new Locker(lockerSize, locationId);
     }
 
-    public static LockerLocation getLockerLocation(String locationId,
-                                                   double latitude,
-                                                   double longitude) {
+    public static LockerLocation getLockerLocation(String locationId, double latitude, double longitude) {
         LockerLocation lockerLocation = new LockerLocation();
         lockerLocation.setLocationId(locationId);
         LocationTiming locationTiming = new LocationTiming();
@@ -77,8 +74,7 @@ public class TestData {
 
     public static LockerPackage getLockerPackage() {
         LockerPackage lockerPackage = new LockerPackage();
-        LockerLocation lockerLocation = setupLockerLocation("VMBGBGKAIN",
-                12.909953, 77.601866);
+        LockerLocation lockerLocation = setupLockerLocation("VMBGBGKAIN", 12.909953, 77.601866);
         lockerPackage.setCode(IdGenerator.generateId(8));
         lockerPackage.setLockerId(lockerLocation.getLockers().get(0).getId());
         lockerPackage.setPackageDeliveredTime(LocalDateTime.now());

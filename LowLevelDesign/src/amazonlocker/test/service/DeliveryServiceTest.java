@@ -30,8 +30,7 @@ public class DeliveryServiceTest {
     }
 
     @Test
-    public void emulateDelivery() throws
-            PackageSizeMappingException {
+    public void emulateDelivery() throws PackageSizeMappingException {
         deliveryService.deliver("o1");
         Notification notification = NotificationRepository.notificationMap.get("o1");
         Assert.assertEquals("o1", notification.getOrderId());
