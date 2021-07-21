@@ -61,7 +61,7 @@ public class ParkingLotService {
     }
 
     public ParkingSpot getParkingSpot(VehicleType vehicleType) {
-        for (ParkingFloor parkingFloor : ParkingLotService.INSTANCE.getParkingFloors()) {
+        for (ParkingFloor parkingFloor : ParkingLotService.getInstance().getParkingFloors()) {
             ParkingSpot parkingSpot = parkingFloor.getSpot(vehicleType);
             if (parkingSpot != null) {
                 return parkingSpot;
@@ -71,7 +71,7 @@ public class ParkingLotService {
     }
 
     public ParkingSpot vacateParkingSpot(String parkingSpotId) {
-        for (ParkingFloor parkingFloor : ParkingLotService.INSTANCE.getParkingFloors()) {
+        for (ParkingFloor parkingFloor : ParkingLotService.getInstance().getParkingFloors()) {
             ParkingSpot parkingSpot = parkingFloor.vacateSpot(parkingSpotId);
             if (parkingSpot != null)
                 return parkingSpot;
