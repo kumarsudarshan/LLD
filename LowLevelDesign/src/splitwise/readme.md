@@ -1,3 +1,4 @@
+
 # Design Splitwise
 
 ### Create an expense sharing application.
@@ -11,3 +12,5 @@ You live with 3 other friends.
 You: User1 (id: u1)
 Flatmates: User2 (u2), User3 (u3), User4 (u4)
 ```
+### Class Diagram
+![UML](https://user-images.githubusercontent.com/8271393/126471188-47561032-a8fd-48e8-992e-4319be93d3b7.png)
