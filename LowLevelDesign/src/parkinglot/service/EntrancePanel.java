@@ -36,4 +36,9 @@ public class EntrancePanel {
         parkingTicket.setTicketStatus(TicketStatus.ACTIVE);
         return parkingTicket;
     }
+
+    public void printParkingTicket(ParkingTicket parkingTicket) {
+        System.out.println("Ticket info: Ticket number: " + parkingTicket.getTicketNumber() + ", Licence number: "
+                + parkingTicket.getLicensePlateNumber() + ", Issued at: " + parkingTicket.getIssuedAt());
+    }
 }

@@ -21,3 +21,8 @@ A parking lot or car park is a dedicated cleared area that is intended for parki
 
 ![image](https://user-images.githubusercontent.com/8271393/126473247-4f8c7fee-32b3-432a-8c02-f7962681d100.png)
 ![image](https://user-images.githubusercontent.com/8271393/126473268-178ed7d7-f388-4c6e-af13-9d5e7ee94221.png)
+
+#### Question 1: How to print the vehicle number and vehicle info on the ticket?
+Answer: When we get ParkingTicket object, in EntrancePanel class we can write print method.
+
+#### Question 2: How to assign a parking spot to vehicle? Do you consider the closet parking spot to the entrance? what if someone parked at wrong place and went away?

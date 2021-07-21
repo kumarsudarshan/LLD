@@ -87,6 +87,7 @@ public class ParkingLotApplication {
         // Test case - 9 - Should be able to get parking ticket
         Vehicle car = new Car("KA02MR6355");
         ParkingTicket parkingTicket1 = entrancePanel.getParkingTicket(car);
+        entrancePanel.printParkingTicket(parkingTicket1);
 
         // Test case 10 - Should not be able to get ticket
         ParkingTicket tkt = entrancePanel.getParkingTicket(new Car("ka04rb8458"));
