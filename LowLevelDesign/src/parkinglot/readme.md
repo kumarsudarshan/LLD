@@ -19,3 +19,5 @@ A parking lot or car park is a dedicated cleared area that is intended for parki
 12.	The system should support a per-hour parking fee model. For example, customers have to pay Rs. 20 for the first hour, Rs. 10 for the second and third hours, and Rs.15 for all the remaining hours.
 ```
 
+![image](https://user-images.githubusercontent.com/8271393/126473247-4f8c7fee-32b3-432a-8c02-f7962681d100.png)
+![image](https://user-images.githubusercontent.com/8271393/126473268-178ed7d7-f388-4c6e-af13-9d5e7ee94221.png)
