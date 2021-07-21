@@ -28,5 +28,4 @@ Once the locker is closed the code is expired and cannot be open again.
 9. Items that are eligible Amazon locker item, can only be returned by customer
 10. Once the Door is closed. User's code will be expired. (User will not be able to open the locker now)
 
-https://www.amazon.com/primeinsider/tips/amazon-locker-qa.html  
-Requirements Courtesy - Leetcode
+![amazon locker](https://user-images.githubusercontent.com/8271393/126514861-2c7d11e1-2e4e-44d8-a23e-459e5b2da232.png)
