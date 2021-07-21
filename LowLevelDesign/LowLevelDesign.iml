@@ -24,5 +24,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Maven: com.baqend:bloom-filter:2.2.4" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:29.0-jre" level="project" />
   </component>
 </module>
