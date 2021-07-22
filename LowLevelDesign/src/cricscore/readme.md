@@ -31,3 +31,7 @@ Come-up with design for cricket website
     E. Commentators
 20. Bowler bowls overs and Batsman scores runs
 21. Bowled balls and runs should be tracked on scorecard
+
+![image](https://user-images.githubusercontent.com/8271393/126699930-359d1c95-ccc4-4e08-a521-edd432148682.png)
+![image](https://user-images.githubusercontent.com/8271393/126699953-09a65131-e890-4af5-90f8-07e43b59e2fb.png)
+
