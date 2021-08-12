@@ -7,5 +7,6 @@
 5. [Design Cricbuzz](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/cricscore)
 5. [Design Snake and Ladder game](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/snakeandladder)
 5. [Design Vehical Rental](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/vehiclerental)
+5. [Design Tic Tac Toe](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/tictactoe)
 6. [Design Library Management System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/library)
 7. [Design Leader Election](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/leaderelection)
