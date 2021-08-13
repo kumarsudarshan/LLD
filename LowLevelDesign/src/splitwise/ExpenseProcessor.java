@@ -23,7 +23,7 @@ public class ExpenseProcessor {
     }
 
     public void addExpense(ExpenseType expenseType, double amount, Integer paidBy, List<SplitBill> splits, ExpenseMetadata expenseMetadata) {
-        Expense expense = ProcessExpense.createExpense(expenseType, amount, userMap.get(paidBy), splits, expenseMetadata);
+        Expense expense = ProcessExpenseFactory.createExpense(expenseType, amount, userMap.get(paidBy), splits, expenseMetadata);
         expenses.add(expense);
         for (SplitBill split : expense.getSplits()) {
             Integer paidTo = split.getUser().getId();

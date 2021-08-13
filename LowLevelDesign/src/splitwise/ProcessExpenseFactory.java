@@ -3,7 +3,7 @@ package splitwise;
 import splitwise.models.*;
 import java.util.List;
 
-public class ProcessExpense {
+public class ProcessExpenseFactory {
     public static Expense createExpense(ExpenseType expenseType, double amount, User paidBy, List<SplitBill> splitBills, ExpenseMetadata expenseMetadata) {
         switch (expenseType) {
             case EXACT:
