@@ -24,3 +24,12 @@ Users should be able to choose and add devices and services to the vehicles whil
 
 System should be provide APIs to search for vechicles booked by users by user id and for a particular interval. 
  
+ ## Vehicle
+![Vehicle](https://user-images.githubusercontent.com/8271393/129326155-e3890830-1dbd-4fb6-9091-3e8dfed60204.png)
+
+## Reservation 
+![image](https://user-images.githubusercontent.com/8271393/129326397-c87c2b64-a550-490f-b891-0d25d5d890b9.png)
+![image](https://user-images.githubusercontent.com/8271393/129326438-f92a5b81-eea3-4efc-8feb-2106ae5dfaf8.png)
+
+## Account
+![Account](https://user-images.githubusercontent.com/8271393/129326466-48ba39a9-b393-4e57-9bfd-f769a329e2e5.png)
