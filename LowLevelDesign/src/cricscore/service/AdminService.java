@@ -1,4 +1,4 @@
-package cricscore.model.people;
+package cricscore.service;
 
 import cricscore.exception.InvalidMatch;
 import cricscore.exception.InvalidTeamException;
@@ -7,12 +7,13 @@ import cricscore.model.match.Fixture;
 import cricscore.model.match.Match;
 import cricscore.model.match.Stadium;
 import cricscore.model.match.Tournament;
+import cricscore.model.people.*;
 import cricscore.repository.DataSink;
 
 import java.util.ArrayList;
 
-public class Admin extends Person {
-    public Admin(String name) {
+public class AdminService extends Person {
+    public AdminService(String name) {
         super(name);
     }
 

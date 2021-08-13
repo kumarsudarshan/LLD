@@ -6,6 +6,7 @@ import cricscore.exception.InvalidTournamentException;
 import cricscore.model.match.*;
 import cricscore.model.people.*;
 import cricscore.repository.DataSink;
+import cricscore.service.AdminService;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -57,7 +58,7 @@ public class CricScoreMain {
         fixture3.setToBePlayed(new Stadium("Eden gardens"));
         fixture3.setMatchStartTime(LocalDateTime.now().plusDays(15));
 
-        Admin admin = new Admin("cric-admin");
+        AdminService admin = new AdminService("cric-admin");
 
         admin.addStadium(new Stadium("Bangalore Chinnaswamy stadium"));
         admin.addStadium(new Stadium("MA Chidambaram stadium"));
