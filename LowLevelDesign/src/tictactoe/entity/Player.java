@@ -1,4 +1,4 @@
-package tictactoe;
+package tictactoe.entity;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ public class Player {
     private PlayerType playerType;
     private ArrayList<Location> moves;
 
-    Player(int playerNo, String name, PlayerType playerType) {
+    public Player(int playerNo, String name, PlayerType playerType) {
         this.symbol = (playerNo == 1) ? PieceEnum.CIRCLE : PieceEnum.CROSS;
         this.name = name;
         this.playerType = playerType;

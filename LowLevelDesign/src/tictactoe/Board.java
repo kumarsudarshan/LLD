@@ -1,5 +1,8 @@
 package tictactoe;
 
+import tictactoe.entity.Location;
+import tictactoe.entity.PieceEnum;
+
 public class Board {
 
     private PieceEnum[][] board;
