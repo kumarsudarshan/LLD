@@ -11,3 +11,6 @@ You may assume the following rules:
     * Game has 3 modes: Human Vs Human, Human Vs Computer and Computer Vs Computer.
     * Initially start with a 3X3 grid, but it can be generalised to NXN grid. So don’t hardcode any variable.
     * Try to cover maximum number of edge cases, like when to abort the game, draw condition, win condition, overwriting the existing value in grid etc)
+
+![image](https://user-images.githubusercontent.com/8271393/129313858-ecb4ab52-5616-4443-b0d5-33e19ea20055.png)
+![image](https://user-images.githubusercontent.com/8271393/129313887-ade63dd9-28c1-4d3a-931c-ccd0505d970d.png)
