@@ -55,7 +55,7 @@ public class Game implements TicTacToe {
         System.out.println("Board size: ");
         Integer boardSize = sc.nextInt();
         this.dimension = boardSize;
-        // Game game = new Game(boardSize);
+        this.board = new Board(this.dimension);
 
         System.out.println("Select Mode: (Human Vs Human/Human Vs Computer/Computer Vs Computer) - 1/2/3");
         Integer mode = sc.nextInt();
@@ -135,11 +135,12 @@ public class Game implements TicTacToe {
                 }
             } catch (Exception e) {
                 System.out.println(e);
-                System.out.println("Want to quit? - Y/N");
-                String option = sc.next();
-                if(option.equalsIgnoreCase("Y") || option.equalsIgnoreCase("YES")){
-                    quit();
-                }
+
+//                System.out.println("Want to quit? - Y/N");
+//                String option = sc.next();
+//                if(option.equalsIgnoreCase("Y") || option.equalsIgnoreCase("YES")){
+//                    quit();
+//                }
             }
         }
     }
