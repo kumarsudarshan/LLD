@@ -11,11 +11,10 @@ import chess.model.Player;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PossibleMovesProviderDiagonal extends PossibleMovesProvider {
+public class PossibleKnightMovesProvider extends PossibleMovesProvider {
 
-
-    public PossibleMovesProviderDiagonal(int maxSteps, MoveBaseCondition baseCondition,
-                                         PieceMoveFurtherCondition moveFurtherCondition, PieceCellOccupyBlocker baseBlocker) {
+    public PossibleKnightMovesProvider(int maxSteps, MoveBaseCondition baseCondition,
+                                       PieceMoveFurtherCondition moveFurtherCondition, PieceCellOccupyBlocker baseBlocker) {
         super(maxSteps, baseCondition, moveFurtherCondition, baseBlocker);
     }
 
@@ -26,6 +25,6 @@ public class PossibleMovesProviderDiagonal extends PossibleMovesProvider {
         result.addAll(findAllNextMoves(piece, board::getLeftDownCell, board, additionalBlockers, player));
         result.addAll(findAllNextMoves(piece, board::getRightUpCell, board, additionalBlockers, player));
         result.addAll(findAllNextMoves(piece, board::getRightDownCell, board, additionalBlockers, player));
-        return result;
+        return null;
     }
 }

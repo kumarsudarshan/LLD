@@ -49,6 +49,34 @@ public class Board {
     }
 
     /**
+     * Helper method to return cell to the left up of current cell.
+     */
+    public Cell getLeftUpCell(Cell cell) {
+        return getCellAtLocation(cell.getX() + 1, cell.getY() - 1);
+    }
+
+    /**
+     * Helper method to return cell to the left down of current cell.
+     */
+    public Cell getLeftDownCell(Cell cell) {
+        return getCellAtLocation(cell.getX() - 1, cell.getY() - 1);
+    }
+
+    /**
+     * Helper method to return cell to the right up of current cell.
+     */
+    public Cell getRightUpCell(Cell cell) {
+        return getCellAtLocation(cell.getX() + 1, cell.getY() + 1);
+    }
+
+    /**
+     * Helper method to return cell to the right down of current cell.
+     */
+    public Cell getRightDownCell(Cell cell) {
+        return getCellAtLocation(cell.getX() - 1, cell.getY() + 1);
+    }
+
+    /**
      * Helper method to return cell at a given location.
      */
     public Cell getCellAtLocation(int x, int y) {

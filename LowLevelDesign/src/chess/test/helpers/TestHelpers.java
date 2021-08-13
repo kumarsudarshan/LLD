@@ -11,6 +11,7 @@ import java.util.List;
 import static chess.model.Color.WHITE;
 
 public class TestHelpers {
+    int boardSize;
 
     public static Board createBoard() {
         Cell[][] cells = new Cell[8][8];

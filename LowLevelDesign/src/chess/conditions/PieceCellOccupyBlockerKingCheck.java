@@ -15,7 +15,9 @@ public class PieceCellOccupyBlockerKingCheck implements PieceCellOccupyBlocker {
         Cell pieceOriginalCell = piece.getCurrentCell();
         piece.setCurrentCell(cell);
         boolean playerGettingCheckByMove = board.isPlayerOnCheck(player);
-        piece.setCurrentCell(pieceOriginalCell);
+        if(playerGettingCheckByMove){
+            piece.setCurrentCell(pieceOriginalCell);
+        }
         return playerGettingCheckByMove;
     }
 }

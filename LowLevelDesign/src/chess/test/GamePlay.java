@@ -74,21 +74,21 @@ public class GamePlay {
 
     String displayChar(Cell cell) {
         if (cell.getCurrentPiece() == null) {
-            return " ";
+            return "-";
         }
         switch (cell.getCurrentPiece().getPieceType()) {
             case PAWN:
-                return "P";
+                return cell.getCurrentPiece().getColor().equals(Color.BLACK) ? "p" : "P";
             case BISHOP:
-                return "B";
+                return cell.getCurrentPiece().getColor().equals(Color.BLACK) ? "b" : "B";
             case KING:
-                return "K";
+                return cell.getCurrentPiece().getColor().equals(Color.BLACK) ? "k" : "K";
             case ROOK:
-                return "R";
+                return cell.getCurrentPiece().getColor().equals(Color.BLACK) ? "r" : "R";
             case QUEEN:
-                return "Q";
+                return cell.getCurrentPiece().getColor().equals(Color.BLACK) ? "q" : "Q";
             case KNIGHT:
-                return "G";
+                return cell.getCurrentPiece().getColor().equals(Color.BLACK) ? "h" : "H";
         }
         return "0";
     }
