@@ -15,5 +15,6 @@
 13. [Design Food Delivery](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/fooddelivery)
 14. [Design Tinder](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/tinder)
 15. [Design BookMyShow](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/bookmyshow)
-16. [Design Library Management System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/library)
-17. [Design Leader Election](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/leaderelection)
+16. [Design Elevator](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/elevator)
+17. [Design Library Management System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/library)
+18. [Design Leader Election](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/leaderelection)
