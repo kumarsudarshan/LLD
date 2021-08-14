@@ -24,3 +24,5 @@ Then the elevator will not stop for this request immediately. Elevator will firs
 from the ground floor will exit. Elevator will then go to the second floor. The person will enter the elevator and press 0.
 The elevator will then move to the zeroth floor.
 
+![image](https://user-images.githubusercontent.com/8271393/129456922-e523c534-8d63-4248-aea2-8c221af7920d.png)
+![image](https://user-images.githubusercontent.com/8271393/129456925-848536dd-067f-4040-97e8-6983c2eef09e.png)
