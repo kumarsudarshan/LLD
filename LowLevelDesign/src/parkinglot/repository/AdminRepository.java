@@ -8,6 +8,22 @@ public class AdminRepository {
     public static Map<String, AdminService> adminMap = new HashMap<>();
     public static List<AdminService> adminServices = new ArrayList<>();
 
+    private static volatile AdminRepository INSTANCE = null;
+
+    private AdminRepository(){
+    }
+
+    public static AdminRepository getInstance(){
+        if(INSTANCE == null){
+            synchronized (ParkingLotRepository.class) {
+                if(INSTANCE == null){
+                    INSTANCE = new AdminRepository();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
     public AdminService addAdmin(AdminService adminService) {
         adminMap.putIfAbsent(adminService.getId(), adminService);
         adminServices.add(adminService);

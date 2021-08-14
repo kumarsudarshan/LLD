@@ -8,7 +8,7 @@ import parkinglot.repository.ParkingLotRepository;
 import java.util.Optional;
 
 public class AdminService extends Account {
-    ParkingLotRepository parkingLotRepository = new ParkingLotRepository();
+    ParkingLotRepository parkingLotRepository = ParkingLotRepository.getInstance();
 
     public void addParkingFloor(ParkingFloor parkingFloor) {
         Optional<ParkingFloor> floor =

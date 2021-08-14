@@ -14,6 +14,22 @@ public class ParkingLotRepository {
     public static Map<String, ParkingLotService> parkingLotMap = new HashMap<>();
     public static List<ParkingLotService> parkingLotServices = new ArrayList<>();
 
+    private static volatile ParkingLotRepository INSTANCE = null;
+
+    private ParkingLotRepository(){
+
+    }
+
+    public static ParkingLotRepository getInstance(){
+        if(INSTANCE == null){
+            synchronized (ParkingLotRepository.class) {
+                if(INSTANCE == null){
+                    INSTANCE = new ParkingLotRepository();
+                }
+            }
+        }
+        return INSTANCE;
+    }
 
     public ParkingLotService addParkingLot(ParkingLotService parkingLotService) {
         parkingLotMap.putIfAbsent(parkingLotService.getParkingLotId(), parkingLotService);
