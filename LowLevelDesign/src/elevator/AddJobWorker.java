@@ -19,6 +19,8 @@ class AddJobWorker implements Runnable {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        System.out.println(request.getExternalRequest());
+        System.out.println(request.getInternalRequest());
         elevator.addJob(request);
     }
 
