@@ -9,7 +9,7 @@
 7. [Design Vehical Rental](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/vehiclerental)
 8. [Design Tic Tac Toe](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/tictactoe)
 9. [Design Chess](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/chess)
-10. [Design Cache Service](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/cacheservice)
+10. [Design Cache Service](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/cache)
 11. [Design Pub-Sub](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/pubsub)
 12. [Design Library Management System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/library)
 13. [Design Leader Election](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/leaderelection)
