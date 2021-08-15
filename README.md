@@ -20,3 +20,4 @@
 18. [Design Leader Election](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/leaderelection)
 19. [Design Vending Machine](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/vendingmachine)
 20. [Design Cab Booking](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/cabbooking)
+21. [Design Online Book Reader System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/bookreader)
