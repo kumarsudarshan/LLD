@@ -73,4 +73,8 @@ public class CabBookingService {
         }
         return null;
     }
+
+    public Ride endRide(int riderId, int ratePerKm) {
+        return rideService.endRide(riderId, ratePerKm);
+    }
 }

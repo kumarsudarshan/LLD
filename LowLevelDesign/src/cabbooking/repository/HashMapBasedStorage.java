@@ -18,6 +18,8 @@ public class HashMapBasedStorage implements Storage {
 
     public Map<String, Vehicle> vehicleMap = new HashMap<String, Vehicle>();
 
+    public Map<Integer, Ride> rideMap = new HashMap<Integer, Ride>();
+
     private static HashMapBasedStorage INSTANCE = null;
 
     private HashMapBasedStorage() {
@@ -85,7 +87,17 @@ public class HashMapBasedStorage implements Storage {
         return driverList;
     }
 
-    public int distance(Location l1, Location l2) {
+    @Override
+    public Ride getRide(int riderId) {
+        return rideMap.get(riderId);
+    }
+
+    @Override
+    public void setRide(int riderId, Ride ride) {
+        rideMap.put(riderId, ride);
+    }
+
+    private int distance(Location l1, Location l2) {
         return (int) Math.sqrt(
                 Math.pow(l2.getLongitude() - l1.getLongitude(), 2) +
                         Math.pow(l2.getLatitude() - l1.getLatitude(), 2)

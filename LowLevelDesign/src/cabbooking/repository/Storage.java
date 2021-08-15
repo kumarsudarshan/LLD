@@ -21,4 +21,8 @@ public interface Storage {
     public Rider getRider(int riderId);
 
     public List<Driver> getAllDriverWithinLocation(Location location, int maxRange);
+
+    Ride getRide(int riderId);
+
+    void setRide(int riderId, Ride ride);
 }

@@ -9,7 +9,7 @@ public class Car extends Vehicle {
     @Override
     public String toString() {
         return "Car [getAvailableSeats()=" + getAvailableSeats() + ", getVehicleName()=" + getVehicleName()
-                + ", getVenhicleNumber()=" + getVenhicleNumber() + ", getClass()=" + getClass() + ", hashCode()="
+                + ", getVehicleNumber()=" + getVenhicleNumber() + ", getClass()=" + getClass() + ", hashCode()="
                 + hashCode() + ", toString()=" + super.toString() + "]";
     }
 
