@@ -21,3 +21,4 @@
 19. [Design Vending Machine](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/vendingmachine)
 20. [Design Cab Booking](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/cabbooking)
 21. [Design Online Book Reader System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/bookreader)
+22. [Design Hotel Room Booking](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/hotelbooking)
