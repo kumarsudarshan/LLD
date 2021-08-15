@@ -1,7 +1,6 @@
 package cabbooking;
 
 import cabbooking.exceptions.CreateException;
-import cabbooking.exceptions.DriverNotAvailableException;
 import cabbooking.model.*;
 import cabbooking.service.CabBookingService;
 
