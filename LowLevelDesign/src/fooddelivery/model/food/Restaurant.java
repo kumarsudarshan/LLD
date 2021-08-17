@@ -1,4 +1,6 @@
-package fooddelivery.model;
+package fooddelivery.model.food;
+
+import fooddelivery.model.common.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,12 +8,12 @@ import java.util.List;
 public class Restaurant {
     private int id;
     private String name;
-    private String item;
+    private List<MenuItem> menuItem;
     private int price;
     private List<Long> serviceablePincode;
     private int quantity;
     private Float rating;
-    private List<Review> reviews=new ArrayList<>();
+    private List<Rating> ratings = new ArrayList<>();
 
     private Integer createdBy;
 
@@ -31,12 +33,12 @@ public class Restaurant {
         this.rating = rating;
     }
 
-    public List<Review> getReviews() {
-        return reviews;
+    public List<Rating> getReviews() {
+        return ratings;
     }
 
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
+    public void setReviews(List<Rating> ratings) {
+        this.ratings = ratings;
     }
 
     public int getQuantity() {
@@ -63,12 +65,20 @@ public class Restaurant {
         this.name = name;
     }
 
-    public String getItem() {
-        return item;
+    public List<MenuItem> getMenuItem() {
+        return menuItem;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setMenuItem(List<MenuItem> menuItem) {
+        this.menuItem = menuItem;
+    }
+
+    public List<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<Rating> ratings) {
+        this.ratings = ratings;
     }
 
     public int getPrice() {

@@ -1,38 +1,44 @@
 package fooddelivery.service;
 
-import fooddelivery.repository.UserDao;
-import fooddelivery.model.Gender;
-import fooddelivery.model.User;
+import fooddelivery.exceptions.AccountDoesNotExistsException;
+import fooddelivery.exceptions.InvalidValueException;
+import fooddelivery.model.account.User;
+import fooddelivery.model.common.Gender;
+import fooddelivery.repository.Storage;
+import fooddelivery.repository.StorageFactory;
+import fooddelivery.repository.StorageType;
 
 public class UserService {
-    private static UserService instance = null;
-    private UserService(){
+    private static volatile UserService INSTANCE = null;
+    private Storage storage = null;
 
-    }
-    public static UserService getInstance(){
-        if(instance==null){
-            instance=new UserService();
-        }
-        return instance;
-    }
-    UserDao userDao=UserDao.getInstance();
-    public User registerUser(Long phone, String name, Long pinCode, Gender gender){
-        if(phone==null || phone<=0 ){
-            System.out.println("Phone number can not be null\n");
-            return null;
-        }
-        else if(pinCode==null || pinCode<=0){
-            System.out.println("invalid value for pinCode\n");
-            return null;
-        }
-        else if(name.isEmpty()){
-            System.out.println("invalid value for name\n");
-            return null;
-        }
-        return userDao.registerUser(phone, name, pinCode, gender);
+    private UserService() {
+        storage = StorageFactory.getDBStorage(StorageType.IN_MEMORY_STORE);
     }
 
-    public User login(Long id){
-        return  userDao.login(id);
+    public static UserService getInstance() {
+        if (INSTANCE == null) {
+            synchronized (UserService.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new UserService();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    public User registerUser(Long phone, String name, Long pinCode, Gender gender) throws InvalidValueException {
+        if (phone == null || phone <= 0) {
+            throw new InvalidValueException("Invalid phone number");
+        } else if (pinCode == null || pinCode <= 0) {
+            throw new InvalidValueException("Invalid pincode");
+        } else if (name.isEmpty()) {
+            throw new InvalidValueException("Name is empty");
+        }
+        return storage.registerUser(phone, name, pinCode, gender);
+    }
+
+    public User login(Long id) throws AccountDoesNotExistsException {
+        return storage.login(id);
     }
 }

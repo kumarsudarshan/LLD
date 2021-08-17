@@ -1,39 +1,47 @@
 package fooddelivery.service;
 
-import fooddelivery.repository.UserDao;
-import fooddelivery.model.Order;
+import fooddelivery.exceptions.InvalidQuantityStockException;
+import fooddelivery.exceptions.InvalidValueException;
+import fooddelivery.exceptions.OrderNotFoundException;
+import fooddelivery.exceptions.RestaurantNotFoundException;
+import fooddelivery.model.food.Order;
+import fooddelivery.repository.Storage;
+import fooddelivery.repository.StorageFactory;
+import fooddelivery.repository.StorageType;
 
 import java.util.List;
 
 public class OrderService {
-    private static OrderService instance = null;
+    private static OrderService INSTANCE = null;
+    private Storage storage = null;
 
     private OrderService() {
-
+        storage = StorageFactory.getDBStorage(StorageType.IN_MEMORY_STORE);
     }
 
     public static OrderService getInstance() {
-        if (instance == null) {
+        if (INSTANCE == null) {
             synchronized (OrderService.class) {
-                if (instance == null) {
-                    instance = new OrderService();
+                if (INSTANCE == null) {
+                    INSTANCE = new OrderService();
                 }
             }
         }
-        return instance;
+        return INSTANCE;
     }
 
-    UserDao userDao = UserDao.getInstance();
-
-    public Order placeOrder(String name, Integer quantity) {
+    public Order placeOrder(String name, String itemName, Integer quantity) throws InvalidValueException, InvalidQuantityStockException, RestaurantNotFoundException {
         if (quantity <= 0) {
-            System.out.println("Invalid value for mandatory fields");
-            return null;
+            throw new InvalidValueException("Invalid quantity value");
         }
-        return userDao.placeOrder(name, quantity);
+        return storage.placeOrder(name, itemName, quantity);
+    }
+
+    public Order dispatchOrder(int orderId) throws OrderNotFoundException {
+        return storage.dispatchOrder(orderId);
     }
 
     public List<Order> listOrders() {
-        return userDao.listOrders();
+        return storage.listOrders();
     }
 }

@@ -1,9 +1,13 @@
-package fooddelivery.model;
+package fooddelivery.model.account;
+
+import fooddelivery.model.common.Gender;
+import fooddelivery.model.food.Order;
+import fooddelivery.model.food.Restaurant;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User extends Account {
 
     private int id;
     private String name;
@@ -38,13 +42,6 @@ public class User {
         this.gender = gender;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

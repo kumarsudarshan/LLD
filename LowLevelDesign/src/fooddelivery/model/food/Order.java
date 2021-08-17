@@ -1,11 +1,17 @@
-package fooddelivery.model;
+package fooddelivery.model.food;
+
+import fooddelivery.model.common.OrderItem;
+import fooddelivery.model.common.OrderStatus;
+
+import java.util.List;
 
 public class Order {
     private int id;
     private int restaurantId;
     private int userId;
     private int quantity;
-    private String item;
+    private OrderStatus orderStatus;
+    private List<OrderItem> orderItems;
     private Long timestamp;
     private Long cost;
 
@@ -49,12 +55,20 @@ public class Order {
         this.quantity = quantity;
     }
 
-    public String getItem() {
-        return item;
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
     public Long getTimestamp() {

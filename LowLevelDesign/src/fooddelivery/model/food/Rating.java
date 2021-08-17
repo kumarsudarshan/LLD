@@ -1,6 +1,6 @@
-package fooddelivery.model;
+package fooddelivery.model.food;
 
-public class Review {
+public class Rating {
     private int id;
     private int score;
     private String comment;
