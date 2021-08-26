@@ -22,3 +22,4 @@
 20. [Design Cab Booking](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/cabbooking)
 21. [Design Online Book Reader System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/bookreader)
 22. [Design Hotel Room Booking](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/hotelbooking)
+23. [Design Meeting Scheduler](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/meetingscheduler)
