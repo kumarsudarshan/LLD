@@ -23,4 +23,6 @@
 21. [Design Online Book Reader System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/bookreader)
 22. [Design Hotel Room Booking](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/hotelbooking)
 23. [Design Meeting Scheduler](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/meetingscheduler)
-23. [Design Circuit Board](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/circuitboard)
+24. [Design Circuit Board](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/circuitboard)
+25. [Design Task Planner](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/taskplanner)
+26. [Design Quick Ride](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/quickride)
