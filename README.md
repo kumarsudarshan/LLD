@@ -27,3 +27,4 @@
 25. [Design Task Planner](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/taskplanner)
 26. [Design Quick Ride](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/quickride)
 27. [Design Facebook Comment System](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/facebookcomment)
+28. [Design Notepad](https://github.com/kumarsudarshan/LLD/tree/main/LowLevelDesign/src/notepad)
